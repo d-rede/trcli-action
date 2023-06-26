@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash
 
 echo "args count: $#"
 echo "args list: $@"
@@ -19,7 +19,7 @@ function append_param_no_val {
     local param=$1
     local value=$2
     echo "$param : $value"
-    if [[ ! -z "$value" ]] && [[ "${value^^}" == "TRUE" ]]; then
+    if [[ "${value^^}" == "TRUE" ]]; then
         TRCLI_PARAMS="$TRCLI_PARAMS $param"; 
     fi
 }
@@ -55,8 +55,8 @@ append_param_no_val --allow-ms ${25}
 TRCLI_PARSE_JUNIT_EXTRA_PARAMS=${26}
 
 # Install and execute trcli
-pip --disable-pip-version-check install trcli
+#pip --disable-pip-version-check install trcli
 ALL_TRCLI_PARAMS="$TRCLI_PARAMS $TRCLI_PARSE_JUNIT_EXTRA_PARAMS"
 echo $ALL_TRCLI_PARAMS
-trcli --help
+#trcli --help
 #trcli $ALL_TRCLI_PARAMS
