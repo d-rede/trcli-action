@@ -98,7 +98,7 @@ runs:
     - ${{ inputs.auto_create_cases_yes }}
     - ${{ inputs.auto_create_cases_no }}
     - ${{ inputs.silent }}
-    - ${{ inputs.file_path }}
+    - ${{ inputs.report_file_path }}
     - ${{ inputs.title }}
     - ${{ inputs.close_run }}
     - ${{ inputs.case_matcher }}
