@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+  
+name: TRCLI action experiment
+
+jobs:
+  trcli_action_job:
+    name: TRCLI Action test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Execute Cypress tests
+        uses: d-rede/trcli-action@main
+        with:
+          who-to-greet: 'the great diogo'
