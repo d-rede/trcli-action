@@ -15,4 +15,7 @@ jobs:
       - name: Execute TRCLI Action
         uses: d-rede/trcli-action@main
         with:
-          who-to-greet: 'the great diogo'
+          host: 'https://testrail101.testrail.io'
+          username: 'diogo.rede@testrail.com'
+          password: 'somePW'
+          file_path: './report.xml'

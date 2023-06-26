@@ -1,15 +1,23 @@
 name: 'TestRail CLI'
 description: 'Use the TestRail CLI to interact with TestRail'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  host:  # id of input
+    description: 'TestRail host URL'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  username:
+    description: "Authentication username"
+    required: true
+  password:
+    description: "Authentication password"
+    required: true
+  file_path:
+    description: "Path to the JUnit XML file"
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.host }}
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.file_path }}
