@@ -54,8 +54,16 @@ append_param --special-parser "${24}"
 append_param_no_val --allow-ms "${25}"
 TRCLI_PARSE_JUNIT_EXTRA_PARAMS="${26}"
 
-# Install and execute trcli
-#pip --disable-pip-version-check install trcli
+# Install trcli
+TRCLI_PACKAGE="trcli"
+TRCLI_VERSION=$1
+if [[ ! -z "${TRCLI_VERSION}" ]]; then
+    TRCLI_PACKAGE="${TRCLI_PACKAGE}==$TRCLI_VERSION"; 
+fi
+echo "Installing $TRCLI_PACKAGE"
+pip --disable-pip-version-check install $TRCLI_PACKAGE
+
+# Execute trcli
 ALL_TRCLI_PARAMS="$TRCLI_PARAMS $TRCLI_PARSE_JUNIT_EXTRA_PARAMS"
 echo $ALL_TRCLI_PARAMS
 #trcli --help
