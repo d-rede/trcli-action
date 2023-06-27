@@ -22,6 +22,7 @@ function append_param_no_val {
 # Navigate to work dir
 WORKING_DIR=${27}
 cd $WORKING_DIR
+ls
 
 # Parameters
 TRCLI_PARAMS=""
@@ -67,4 +68,5 @@ pip --disable-pip-version-check install $TRCLI_PACKAGE
 
 # Execute trcli
 ALL_TRCLI_PARAMS="$TRCLI_PARAMS $TRCLI_PARSE_JUNIT_EXTRA_PARAMS"
+echo $ALL_TRCLI_PARAMS
 trcli $ALL_TRCLI_PARAMS
