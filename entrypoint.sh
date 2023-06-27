@@ -1,11 +1,6 @@
 #!/bin/bash
 
-echo "args count: $#"
-echo "args list: $@"
-
-
-TRCLI_PARAMS=""
-
+# Functions
 function append_param {
     local param=$1
     local value=$2
@@ -24,15 +19,18 @@ function append_param_no_val {
     fi
 }
 
+# Parameters
+TRCLI_PARAMS=""
+
 # General parameters
-append_param -c "$2"
-append_param -h "$3"
-append_param -u "$4"
-append_param -p "$5"
-append_param --project "$6"
-append_param --project-id "$7"
-append_param_no_val -v "$8"
-append_param_no_val --verify "$9"
+append_param -c "${2}"
+append_param -h "${3}"
+append_param -u "${4}"
+append_param -p "${5}"
+append_param --project "${6}"
+append_param --project-id "${7}"
+append_param_no_val -v "${8}"
+append_param_no_val --verify "${9}"
 append_param_no_val --insecure "${10}"
 append_param -b "${11}"
 append_param -t "${12}"
@@ -65,6 +63,4 @@ pip --disable-pip-version-check install $TRCLI_PACKAGE
 
 # Execute trcli
 ALL_TRCLI_PARAMS="$TRCLI_PARAMS $TRCLI_PARSE_JUNIT_EXTRA_PARAMS"
-echo $ALL_TRCLI_PARAMS
-#trcli --help
-#trcli $ALL_TRCLI_PARAMS
+trcli $ALL_TRCLI_PARAMS
