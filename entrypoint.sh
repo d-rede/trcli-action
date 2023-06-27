@@ -68,5 +68,5 @@ pip --disable-pip-version-check install $TRCLI_PACKAGE
 
 # Execute trcli
 TRCLI_CMD="trcli $TRCLI_PARAMS $TRCLI_PARSE_JUNIT_EXTRA_PARAMS"
-echo $TRCLI_CMD
-eval $TRCLI_CMD
+echo "$TRCLI_CMD"
+eval "$TRCLI_CMD"
