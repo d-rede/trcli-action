@@ -4,7 +4,6 @@
 function append_param {
     local param=$1
     local value=$2
-    echo "$param : $value"
     if [ ! -z "$value" ]; then 
         TRCLI_PARAMS="$TRCLI_PARAMS $param \"$value\""; 
     fi
@@ -13,7 +12,6 @@ function append_param {
 function append_param_no_val {
     local param=$1
     local value=$2
-    echo "$param : $value"
     if [[ "${value^^}" == "TRUE" ]]; then
         TRCLI_PARAMS="$TRCLI_PARAMS $param"; 
     fi
@@ -68,5 +66,4 @@ pip --disable-pip-version-check install $TRCLI_PACKAGE
 
 # Execute trcli
 TRCLI_CMD="trcli $TRCLI_PARAMS $TRCLI_PARSE_JUNIT_EXTRA_PARAMS"
-echo "$TRCLI_CMD"
 eval "$TRCLI_CMD"
