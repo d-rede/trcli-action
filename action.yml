@@ -79,6 +79,9 @@ inputs:
   junit_parser_params:
     description: 'Any parameters, as you would write them on a command line (i.e.: --case-fields type_id:1)'
     required: false
+  working_directory:
+    description: 'The working directory to execute the TestRail CLI'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -109,3 +112,4 @@ runs:
     - ${{ inputs.special_parser }}
     - ${{ inputs.allow_ms }}
     - ${{ inputs.junit_parser_params }}
+    - ${{ inputs.working_directory }}

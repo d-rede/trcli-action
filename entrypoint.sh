@@ -19,6 +19,10 @@ function append_param_no_val {
     fi
 }
 
+# Navigate to work dir
+WORKING_DIR=${27}
+cd $WORKING_DIR
+
 # Parameters
 TRCLI_PARAMS=""
 
