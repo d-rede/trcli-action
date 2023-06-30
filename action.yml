@@ -5,10 +5,10 @@ inputs:
     description: 'Version of the CLI to be installed (defaults to latest)'
     required: false
   config:
-    description: Optional path for config yml file'
+    description: 'Optional path for config yml file'
     required: false
   host:
-    description: 'TestRail host URL (i.e.: https://YOUR_INSTANCE.testrail.io)'
+    description: 'TestRail host URL (i.e.: https://my-instance.testrail.io)'
     required: true
   username:
     description: 'Authentication username'
