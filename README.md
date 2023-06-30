@@ -1,6 +1,6 @@
 # TestRail CLI results upload action
 
- > [GitHub Action](https://docs.github.com/en/actions) to upload automated test results to [TestRail](https://www.testrail.com) using the [TestRail CLI](https://github.com/gurock/trcli). The action handles the installation of the desired CLI version and allows to set all of the configurations supported by the CLI.
+ > [GitHub Action](https://docs.github.com/en/actions) to upload automated test results to [TestRail](https://www.testrail.com) using the [TestRail CLI](https://github.com/gurock/trcli). The action handles the installation of the desired CLI version and allows setting all of the configurations supported by the CLI.
 
  # Usage example
 
